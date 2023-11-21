@@ -47,7 +47,7 @@ void MediansOtMedians(double a, double b, double c, double arr[]) {
 }
 /*task 10*/
 bool Ravnobedren(double a, double b, double c) {
-    if ((a = b && a != c) || (a = c && a != b) || (b = c && b != a))
+    if ((a == b && a != c) || (a == c && a != b) || (b == c && b != a))
         return true;
     else
         return false;
@@ -91,11 +91,11 @@ int main()
     double k = 0.0;//инициализируем переменную 
     double l = 0.0;//инициализируем переменную 
     double m = 0.0;//инициализируем переменную
+    std::cin >> k >> l >> m; //введение перемеенных с консоли
     if (Ravnobedren(k, l, m))
         std::cout << "Treygolnik ravnobedren " << std::endl;
     else
         std::cout << "Treygolnik ne ravnobedren " << std::endl;
-
 
 }
 
