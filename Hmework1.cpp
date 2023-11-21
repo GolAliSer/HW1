@@ -52,6 +52,16 @@ bool Ravnobedren(double a, double b, double c) {
     else
         return false;
 }
+/*task 12*/
+int IdealVes(float a, float b) {
+    float i = a - 100; //определяем идеальный вес по формуле
+    if (i < b) //сравниваем иделаьный вес и данный вес
+        return 1; //присваеваем каждой рекомендации определенную цифру
+    else if (i > b)
+        return 2;
+    else
+        return 0;
+}
 
 int main()
 {
@@ -96,6 +106,18 @@ int main()
         std::cout << "Treygolnik ravnobedren " << std::endl;
     else
         std::cout << "Treygolnik ne ravnobedren " << std::endl;
+
+    /* task 12*/
+    std::cout << "Vvedite rost u ves: " << std::endl;
+    float rost = 0.0;//инициализируем переменную 
+    float ves = 0.0;//инициализируем переменную 
+    std::cin >> rost >> ves; //вводим с консоли переменные
+    if (IdealVes(rost, ves) == 0)  //вызываем функцию, и с помощью определяющих цифр, выводим нужные рекомендации
+        std::cout << "Vash ves idealen" << std::endl;
+    else if (IdealVes(rost, ves) == 1)
+        std::cout << "Stoit pohydet" << std::endl;
+    else 
+        std::cout << "Stoit popravitca" << std::endl;
 
 }
 
