@@ -72,6 +72,25 @@ float Stoimost(float pr, int day) {
     else
         return (pr * st);
 }
+/*task 16*/
+bool Schastliv(int a) {
+    int sum1 = 0;
+    int sum2 = 0;
+    int a1 = a % 1000;
+    int a2 = a / 1000;
+    while (a1 != 0) {
+        sum1 += a1 % 10;
+        a1 /= 10;
+    }
+    while (a2 != 0) {
+        sum2 += a2 % 10;
+        a2 /= 10;
+    }
+    if (sum1 == sum2)
+        return true;
+    else
+        return false;
+}
 
 int main()
 {
@@ -137,6 +156,14 @@ int main()
     std::cout << "Vvedite day (1 = pn, 2 = vt...): " << std::endl;
     std::cin >> day;
     std::cout << "Stoimost razgovora: " << Stoimost(pr, day) << std::endl;
-    
+
+    /*task 16*/
+    int sh = 0;
+    std::cout << "Vvedite shestiznachnoe chislo: " << std::endl;
+    std::cin >> sh;
+    if (Schastliv(sh) == true)
+        std::cout << "Chislo schastlivy" << std::endl;
+    else 
+        std::cout << "Chislo ne schastlivy " << std::endl;
 }
 
