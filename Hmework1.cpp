@@ -91,6 +91,17 @@ bool Schastliv(int a) {
     else
         return false;
 }
+bool Palindrome(int a) {
+    if ((a % 10) != (a / 1000))
+        return false;
+    else
+        a /= 10;
+        a %= 100;
+    if ((a % 10) == (a / 10))
+        return true;
+    else
+        return false;
+}
 
 int main()
 {
@@ -165,5 +176,14 @@ int main()
         std::cout << "Chislo schastlivy" << std::endl;
     else 
         std::cout << "Chislo ne schastlivy " << std::endl;
+
+    /*task 18*/
+    int h = 0;
+    std::cout << "Vvedite chetyirehznachnoe chislo: " << std::endl;
+    std::cin >> h;
+    if (Palindrome(h) == true)
+        std::cout << "Chislo palidrome" << std::endl;
+    else
+        std::cout << "Chislo ne palidrome" << std::endl;
 }
 
