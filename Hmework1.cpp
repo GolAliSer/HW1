@@ -92,7 +92,7 @@ int main()
     double l = 0.0;//инициализируем переменную 
     double m = 0.0;//инициализируем переменную
     std::cin >> k >> l >> m; //введение перемеенных с консоли
-    if (Ravnobedren(k, l, m))
+    if (Ravnobedren(k, l, m) == true)
         std::cout << "Treygolnik ravnobedren " << std::endl;
     else
         std::cout << "Treygolnik ne ravnobedren " << std::endl;
