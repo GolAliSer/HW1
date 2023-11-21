@@ -62,6 +62,16 @@ int IdealVes(float a, float b) {
     else
         return 0;
 }
+/*task 14*/
+float Stoimost(float pr, int day) {
+    float st = 0.0;
+    std::cout << "Vvedite stoimost 1 minute: " << std::endl;
+    std::cin >> st;
+    if (day == 6 || day == 7)
+        return ((pr * st) - ((pr * st) * 0.2));
+    else
+        return (pr * st);
+}
 
 int main()
 {
@@ -119,5 +129,14 @@ int main()
     else 
         std::cout << "Stoit popravitca" << std::endl;
 
+    /*task 14*/
+    float pr = 0.0;
+    int day = 0;
+    std::cout << "Vvedite prodolzhitelnost razgovora v minutes: " << std::endl;
+    std::cin >> pr;
+    std::cout << "Vvedite day (1 = pn, 2 = vt...): " << std::endl;
+    std::cin >> day;
+    std::cout << "Stoimost razgovora: " << Stoimost(pr, day) << std::endl;
+    
 }
 
