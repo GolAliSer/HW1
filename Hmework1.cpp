@@ -7,12 +7,10 @@ double DlinaOkruzhnosti(double a) { //счиатем длину окружнос
     double P = 3.14; //вводим число пи
     return (2 * P * a); //по формуле 
 }
-
 double PloshadKryga (double a) { //считаем площадь круга
     double P = 3.14; //вводим число пи
     return (P * pow(a,2)); //по формул, где pow, функция для возведения в степень, здесь во 2 степень
 }
-
 /* task 4*/
 int SummaCifr(int a) { 
     int summ = 0; //инициализируем переменную для суммы
@@ -22,7 +20,6 @@ int SummaCifr(int a) {
     }
     return summ;
 }
-
 /* task 6*/
 double DekartCoordinates1(double p, double f) { //task 6
     double x = p * cos(f);
@@ -32,7 +29,6 @@ double DekartCoordinates2(double p, double f) { //task 6
     double y = p * sin(f);
     return y;
 }
-
 /* task 8*/
 void MediansOtMedians(double a, double b, double c, double arr[]) {
     double m1 = 0.5 * sqrt(2 * pow(b,2) + 2 * pow(c,2) - pow(a,2)); //ищем медиану, которая станет стороной нового треугольника
@@ -91,6 +87,7 @@ bool Schastliv(int a) {
     else
         return false;
 }
+/*task 18*/
 bool Palindrome(int a) {
     if ((a % 10) != (a / 1000))
         return false;
@@ -98,6 +95,13 @@ bool Palindrome(int a) {
         a /= 10;
         a %= 100;
     if ((a % 10) == (a / 10))
+        return true;
+    else
+        return false;
+}
+/*task 20*/
+bool Pryamoygolniki (float a, float b, float c, float d) {
+    if ((a < c) && (b < d) || (a < d) && (b < c))
         return true;
     else
         return false;
@@ -185,5 +189,19 @@ int main()
         std::cout << "Chislo palidrome" << std::endl;
     else
         std::cout << "Chislo ne palidrome" << std::endl;
+
+     /*task 20*/
+    std::cout << "Vvedite storoni 1 pryamoygolnika (a, b): " << std::endl;
+    float aa = 0;
+    float bb = 0;
+    std::cin >> aa >> bb;
+    std::cout << "Vvedite storoni 2 pryamoygolnika (c, d): " << std::endl;
+    float cc = 0;
+    float dd = 0;
+    std::cin >> cc >> dd;
+    if (Pryamoygolniki(aa, bb, cc, dd))
+        std::cout << "Pryamoygolnik pomestitca. " << std::endl;
+    else
+        std::cout << "Pryamoygolnik ne pomestitca. " << std::endl;
 }
 
