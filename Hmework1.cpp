@@ -127,14 +127,14 @@ int main()
     std::cout << "Vvedite chislo iz 4 cifr: ";
     int ch = 0;//инициализируем переменную 
     std::cin >> ch; //введение перемеенной с консоли
-    std::cout << "Summa cifr ravna = " << SummaCifr(ch) << std::endl; //вывод искомое через функцию
+    std::cout << "Summa cifr ravna = " << SummaCifr(ch) << std::endl; //вывод искомого через функцию
 
     /* task 6*/
     std::cout << "Vvedite polyarn coordinates: " << std::endl;
     double p = 0.0;//инициализируем переменную 
     double f = 0.0;//инициализируем переменную 
     std::cin >> p >> f; //введение перемеенных с консоли
-    std::cout << "Dekart coordanates: (" << DekartCoordinates1(p, f) << "," << DekartCoordinates2(p, f) << ")" << std::endl; //вывод искомое через функцию
+    std::cout << "Dekart coordanates: (" << DekartCoordinates1(p, f) << "," << DekartCoordinates2(p, f) << ")" << std::endl; //вывод искомого через функцию
 
     /* task 8*/
     std::cout << "Vvedite storony treygolnika: " << std::endl;
@@ -143,18 +143,18 @@ int main()
     double c = 0.0;//инициализируем переменную
     std::cin >> a >> b >> c; //введение перемеенных с консоли
     double arr[3]; //массив для хранения медиан, для вывода
-    MediansOtMedians(a, b, c, arr);
-    std::cout << "Medians pri storonah ravnih medianam: " << arr[0] << ", " << arr[1] << ", " << arr[2] << std::endl;
+    MediansOtMedians(a, b, c, arr); //обращаемся к функции
+    std::cout << "Medians pri storonah ravnih medianam: " << arr[0] << ", " << arr[1] << ", " << arr[2] << std::endl; //после функции в нашем массиве храняться медианы, выводим их, используя из номера в массиве
 
     /* task 10*/
-    std::cout << "Vvedite storony treygolnika: " << std::endl;
+    std::cout << "Vvedite storony treygolnika: " << std::endl; 
     double k = 0.0;//инициализируем переменную 
     double l = 0.0;//инициализируем переменную 
     double m = 0.0;//инициализируем переменную
     std::cin >> k >> l >> m; //введение перемеенных с консоли
-    if (Ravnobedren(k, l, m) == true)
+    if (Ravnobedren(k, l, m) == true) //если функция возвращает true, значит треуголник равнобедренный
         std::cout << "Treygolnik ravnobedren " << std::endl;
-    else
+    else //если false, треугольник не равнобедренный
         std::cout << "Treygolnik ne ravnobedren " << std::endl;
 
     /* task 12*/
@@ -170,44 +170,44 @@ int main()
         std::cout << "Stoit popravitca" << std::endl;
 
     /*task 14*/
-    float pr = 0.0;
-    int day = 0;
+    float pr = 0.0; //инициализируем переменную продолжительности
+    int day = 0; //инициализируем переменную дня
     std::cout << "Vvedite prodolzhitelnost razgovora v minutes: " << std::endl;
-    std::cin >> pr;
+    std::cin >> pr; //вводим переменные с консоли
     std::cout << "Vvedite day (1 = pn, 2 = vt...): " << std::endl;
-    std::cin >> day;
-    std::cout << "Stoimost razgovora: " << Stoimost(pr, day) << std::endl;
+    std::cin >> day; //вводим переменные с консоли
+    std::cout << "Stoimost razgovora: " << Stoimost(pr, day) << std::endl; //выводим через функцию стоимость
 
     /*task 16*/
-    int sh = 0;
+    int sh = 0; //инициализируем переменную для шестизначного числа
     std::cout << "Vvedite shestiznachnoe chislo: " << std::endl;
-    std::cin >> sh;
-    if (Schastliv(sh) == true)
+    std::cin >> sh; //вводим переменные с консоли
+    if (Schastliv(sh) == true) //если функция true, значит число счастливое
         std::cout << "Chislo schastlivy" << std::endl;
-    else 
+    else //в другом случае число несчастливое
         std::cout << "Chislo ne schastlivy " << std::endl;
 
     /*task 18*/
-    int h = 0;
+    int h = 0; //инициализируем переменную для четырехзначного числа
     std::cout << "Vvedite chetyirehznachnoe chislo: " << std::endl;
-    std::cin >> h;
-    if (Palindrome(h) == true)
+    std::cin >> h; //вводим переменные с консоли
+    if (Palindrome(h) == true) //если функция true, значит число палидром
         std::cout << "Chislo palidrome" << std::endl;
-    else
+    else //в другом случае число не палидром
         std::cout << "Chislo ne palidrome" << std::endl;
 
      /*task 20*/
     std::cout << "Vvedite storoni 1 pryamoygolnika (a, b): " << std::endl;
-    float aa = 0;
-    float bb = 0;
-    std::cin >> aa >> bb;
+    float aa = 0; //инициализируем переменную первой стороны 1 прямоугольника
+    float bb = 0; //инициализируем переменную второй стороны 1 прямоугольника
+    std::cin >> aa >> bb; //вводим переменные с консоли
     std::cout << "Vvedite storoni 2 pryamoygolnika (c, d): " << std::endl;
-    float cc = 0;
-    float dd = 0;
-    std::cin >> cc >> dd;
-    if (Pryamoygolniki(aa, bb, cc, dd))
+    float cc = 0; //инициализируем переменную первой стороны 2 прямоугольника
+    float dd = 0; //инициализируем переменную второй стороны 2 прямоугольника
+    std::cin >> cc >> dd; //вводим переменные с консоли
+    if (Pryamoygolniki(aa, bb, cc, dd)) //если функция true, значит 1 прямоугольник поместиться во 2
         std::cout << "Pryamoygolnik pomestitca. " << std::endl;
-    else
+    else //в другом случае, 1 прямоугольник не поместиться во 2
         std::cout << "Pryamoygolnik ne pomestitca. " << std::endl;
 }
 
