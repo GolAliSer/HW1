@@ -213,7 +213,7 @@ int Chislo(int number) {
     }
     return pro;
 }
-/*Task 19.1*/
+/*Task 19.2*/
 int Chislo1(int number) {
     int summa = 0;
 
