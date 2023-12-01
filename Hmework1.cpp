@@ -266,5 +266,7 @@ int main()
         std::cout << "Pryamoygolnik pomestitca. " << std::endl;
     else //в другом случае, 1 прямоугольник не поместиться во 2
         std::cout << "Pryamoygolnik ne pomestitca. " << std::endl;
+
+    return 0;
 }
 
