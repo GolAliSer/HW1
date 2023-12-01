@@ -153,6 +153,8 @@ float Stoimost(float pr, int day) { //функция для подсчета с�
         return (pr * st);
 }
 
+/*task 15 выполнен в main*/
+
 /*task 16*/
 bool Schastliv(int a) { //функция для проверки счастливого шестизначного числа
     int sum1 = 0; //инициализируем переменную для суммы последних трех цифр
@@ -374,10 +376,10 @@ int main()
     std::cout << "Stoimost razgovora: " << Stoimost(pr, day) << std::endl; //выводим через функцию стоимость
 
     /*Task 15*/
-   int mon;
-   std::cout << "Vvedite number of month: ";
+    int mon;
+    std::cout << "Vvedite number of month: ";
     std::cin >> mon;
-   switch (mon) {
+    switch (mon) {
     case 1:
         std::cout << "January\n";
         break;
