@@ -446,7 +446,7 @@ int main()
     else //в другом случае число не палидром
         std::cout << "Chislo ne palidrome" << std::endl;
 
-    /*Task 19.1*/
+    /*Task 19*/
     int number, b;
     std::cout << "Vvedite trechznachnoe chislo: ";
     std::cin >> number;
